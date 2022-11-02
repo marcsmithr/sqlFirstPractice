@@ -7,7 +7,8 @@ const router = express.Router();
  *   - Database file: "data_source" environment variable
  *   - Database permissions: read/write records in tables
  */
-// Your code here
+const sqlite3 = require ('sqlite3');
+const db = new sqlite3.Database(DATA_Source, sqlite3.OPEN_READWRITE);
 
 /**
  * BASIC PHASE 2, Step B - List of all trees in the database
@@ -19,7 +20,7 @@ const router = express.Router();
  *   - Object properties: height-ft, tree, id
  *   - Ordered by the height_ft from tallest to shortest
  */
-// Your code here
+
 
 /**
  * BASIC PHASE 3 - Retrieve one tree with the matching id
