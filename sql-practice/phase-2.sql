@@ -1,1 +1,15 @@
--- Your code here
+CREATE TABLE customers (
+    id INTEGER PRIMARY KEY,
+    name VARCHAR(40) NOT NULL,
+    phone INTEGER(10) UNIQUE,
+    email VARCHAR(255) UNIQUE,
+    points INTEGER DEFAULT 5,
+    created_at TIMESTAMP DEFAULT CURRENT_TIME
+);
+
+CREATE TABLE coffee_orders (
+    id INTEGER PRIMARY KEY,
+    is_redeemed BOOLEAN DEFAULT 0,
+    ordered_at TIMESTAMP DEFAULT CURRENT_TIME
+);
+
